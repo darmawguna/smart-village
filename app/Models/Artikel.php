@@ -10,11 +10,24 @@ class Artikel extends Model
     /** @use HasFactory<\Database\Factories\ArtikelFactory> */
     use HasFactory;
 
-    public function kategori () {
+    protected $fillable = [
+        'judul',
+        'konten',
+        'tanggal_publikasi',
+        'gambar',
+        'penulis_id',
+        'kategori_id'
+    ];
+
+    public function kategori()
+    {
         return $this->belongsTo(Kategori::class);
     }
 
-    public function user() {
+
+
+    public function penulis()
+    {
         return $this->belongsTo(User::class);
     }
-} 
+}

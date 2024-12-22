@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('judul', 255);
             $table->text('konten');
             $table->dateTime('tanggal_publikasi')->nullable();
+            $table->string('gambar', 255)->nullable();
             $table->foreignId('penulis_id')->constrained('users');
             $table->foreignId('kategori_id')->constrained('kategoris');
             $table->softDeletes();
