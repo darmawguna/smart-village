@@ -1,0 +1,3 @@
+1.import database atau migrate boleh.
+
+2.sisanya fokus pada bagian js/pages untuk buat front end 
