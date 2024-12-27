@@ -15,7 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('nama', 255);
             $table->text('deskripsi');
-            $table->decimal('harga', 10, 2);
+            $table->decimal('harga', 13, 3);
+            $table->string('gambar_produk');
             $table->timestamps();
             $table->softDeletes();
         });

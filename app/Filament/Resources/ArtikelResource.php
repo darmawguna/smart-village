@@ -12,12 +12,13 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
-use Filament\Tables\Columns\TextColumn;
+
 use PhpParser\Node\Stmt\Label;
 use Filament\Notifications\Notification;
 use Filament\Forms\Components\MarkdownEditor;
 use Filament\Forms\Components\FileUpload;
 use Illuminate\Support\Facades\Storage;
+use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Columns\ImageColumn;
 use PHPUnit\Framework\Reorderable;
 
@@ -100,19 +101,19 @@ class ArtikelResource extends Resource
             ->actions([
                 Tables\Actions\EditAction::make(),
                 Tables\Actions\DeleteAction::make()
-                    ->successNotification(
-                        Notification::make()
-                            ->success()
-                            ->title('Artikel Berhasil dihapus')
-                            ->body(`Berhasil menghapus artikel`),
-                    )
                     ->action(function (Artikel $record) {
                         $record->delete();
+
+                        Notification::make()
+                            ->title('Kategori berhasil dihapus')
+                            ->success()
+                            ->send();
                     })
                     ->requiresConfirmation()
                     ->modalHeading('Hapus Artikel')
                     ->modalDescription('Apakah anda yakin akan menghapus artikel? proses tidak bisa diulang.')
                     ->modalSubmitActionLabel('Ya, Hapus itu')
+                    ->successNotificationTitle('Kategori berhasil dihapus')
 
             ])
             ->bulkActions([
