@@ -15,6 +15,37 @@ Route::get('/', function () {
     ]);
 });
 
+Route::get('/home', function () {
+    return Inertia::render('Beranda');
+});
+Route::get('/about', function () {
+    return Inertia::render('About');
+});
+Route::get('/report', function () {
+    return Inertia::render('ReportPage');
+});
+Route::get('/reportForm', function () {
+    return Inertia::render('ReportForm');
+});
+Route::get('/allReportHistory', function () {
+    return Inertia::render('AllReport');
+});
+Route::get('/reportDetail', function () {
+    return Inertia::render('DetailReport');
+});
+Route::get('/article', function () {
+    return Inertia::render('Article');
+});
+Route::get('/articleDetail', function () {
+    return Inertia::render('DetailArticle');
+});
+Route::get('/product', function () {
+    return Inertia::render('Product');
+});
+Route::get('/productDetail', function () {
+    return Inertia::render('DetailProduct');
+});
+
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

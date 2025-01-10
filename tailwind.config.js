@@ -20,6 +20,19 @@ export default {
             fontFamily: {
                 sans: ["Figtree", ...defaultTheme.fontFamily.sans],
             },
+            colors: {
+                color1: "#004B23", // Contoh warna custom
+                color2: "#006400",
+                color3: "#007200",
+                color4: "#008000",
+                color5: "#38B000",
+                color6: "#70E000",
+                color7: "#9EF01A",
+                color8: "#CCFF33",
+            },
+            backgroundImage: {
+                "img1": "url('/assets/images/background1.jpg')",
+            },
         },
     },
 
