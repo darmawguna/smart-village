@@ -11,7 +11,7 @@ const Product = () => {
             <div className="flex justify-center min-h-screen mt-[80px] px-4 ">
                 <div className="flex flex-col w-[95%]">
                 <div className="bg-color5 h-[40vh] flex justify-between items-center px-10 rounded-lg">
-                    <div>
+                    <div className="ssm:flex ssm:flex-col ssm:items-center ssm:justify-center">
                         <h1 className="font-bold text-[40px] w-[300px]">
                             Jelajahi Hasil Alam Terbaik
                         </h1>
@@ -24,22 +24,22 @@ const Product = () => {
                             />
                         </ButtonNavigate>
                     </div>
-                    <div className="flex gap-4">
+                    <div className="flex gap-4 ssm:hidden md:hidden">
                         <CardBanner images="/assets/images/produ1.png" />
                         <CardBanner images="/assets/images/produ1.png" />
                         <CardBanner images="/assets/images/produ1.png" />
                         <CardBanner images="/assets/images/produ1.png" />
                     </div>
-                    <div>
+                    <div className=" ssm:hidden">
                         <img
                             src="/assets/images/people.png"
                             alt="people"
-                            className="w-[200px] h-[235px]"
+                            className="w-[200px] h-[235px] md:w-[150px] md:h-[195px]"
                         />
                     </div>
                 </div>
-                <div className="flex justify-center mt-7">
-                    <SearchBar variant='w-[500px]' placeholder='cari produk lainnya disini' />
+                <div className="flex justify-center sm:justify-end mt-7">
+                    <SearchBar variant='w-[500px] sm:w-[300px]' placeholder='cari produk lainnya disini' />
                 </div>
                 <div className="flex py-10 flex-wrap justify-center gap-5">
                     <CardProduct prodImages="/assets/images/produ1.png" />

@@ -3,6 +3,7 @@ import React from "react";
 
 const WaButton = (props) => {
     const {variant, children, phoneNumber, message='Halo, apakah produk ini masih tersedia?'} = props;
+
     const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
     return <Link

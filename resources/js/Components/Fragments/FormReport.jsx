@@ -5,7 +5,7 @@ import ButtonElements from "../Elements/Button";
 
 const FormReport = () => {
     return (
-        <div className="max-w-5xl mx-auto p-8 bg-white rounded-lg shadow-md">
+        <div className="p-8 bg-white rounded-lg shadow-md">
             <div className="mb-6">
                 <ButtonNavigate navigateTo="/report">
                     <img
@@ -16,13 +16,13 @@ const FormReport = () => {
                 </ButtonNavigate>
             </div>
 
-            <h1 className="text-3xl font-bold text-center mb-8" style={{ color: 'var(--color5)' }}>
+            <h1 className="text-3xl font-bold text-center mb-8 text-color5">
                 Laporkan Kejadian
             </h1>
 
-            <form className="max-w-4xl mx-auto">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div className="space-y-6">
+            <form className="flex flex-col items-center">
+                <div className="flex gap-8 sm:flex-col sm:items-center">
+                    <div className="space-y-6 w-[45%] sm:w-full">
                         <InputElements
                             labels="Nama Panjang"
                             name="name"
@@ -47,7 +47,7 @@ const FormReport = () => {
                         />
                     </div>
 
-                    <div className="space-y-6">
+                    <div className="space-y-6 w-[45%] sm:w-full">
                         <InputElements
                             labels="Email"
                             name="email"

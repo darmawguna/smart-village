@@ -6,8 +6,8 @@ import React from "react";
 const ReportPage = () => {
     return (
         <HomeLayout>
-            <div className="h-[75vh]">
-                <div className="flex justify-center mt-[100px]">
+            <div className="flex flex-col min-h-screen px-4">
+                <div className="flex justify-center mt-[80px]">
                     <div className="text-center">
                         <h1 className="font-bold text-2xl mb-2">
                             Ini Adalah Halaman Untuk Melihat & Melaporkan
@@ -40,7 +40,7 @@ const ReportPage = () => {
                         </div>
                         <hr />
                         {/* card history start */}
-                        <div className="h-[45vh] overflow-y-auto">
+                        <div>
                         <ReportHistory
                         reportImages='/assets/images/background1.jpg'
                         title='Kebakaran Dibanjar Jawa'
