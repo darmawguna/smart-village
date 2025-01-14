@@ -14,13 +14,13 @@ const DetailProduct = () => {
                         className="w-7 h-7"
                     />
                 </ButtonNavigate>
-                <div className="flex justify-around">
+                <div className="flex justify-around sm:flex-col sm:justify-center sm:items-center">
                     <img
                         src="/assets/images/background1.jpg"
                         alt="productPhoto"
-                        className="w-[450px] h-[450px]"
+                        className="w-[450px] h-[450px] md:w-[300px] md:h-[300px] sm:w-full "
                     />
-                    <div className="w-[50%]">
+                    <div className="w-[50%] sm:w-full">
                         <h1 className="text-2xl font-bold">Nama Produk</h1>
                         <div className="flex justify-between">
                         <span>Rp. 10.000/Kg</span>
@@ -45,7 +45,7 @@ const DetailProduct = () => {
                             </p>
                         </div>
                         <WaButton
-                            phoneNumber="6283114755807"
+                            phoneNumber="6282147389276"
                             variant="rounded-lg py-2 bg-color5 text-white text-center text-xl w-full"
                         >
                             Beli Sekarang

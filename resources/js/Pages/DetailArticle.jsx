@@ -171,6 +171,12 @@ const DetailArticle = () => {
                         quaerat cupiditate veniam, optio soluta?
                     </p>
                 </div>
+                <div>
+
+                  <div>
+                    
+                  </div>
+                </div>
             </div>
         </HomeLayout>
     );

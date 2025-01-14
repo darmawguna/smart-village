@@ -33,6 +33,13 @@ export default {
             backgroundImage: {
                 "img1": "url('/assets/images/background1.jpg')",
             },
+            screens: {
+                ssm: { max: '550px' },
+                sm: { max: '715px' },  // Semua ukuran <= 639px
+                md: { max: '850px' },  // Semua ukuran <= 767px
+                lg: { max: '1023px' }, // Semua ukuran <= 1023px
+                xl: { max: '1279px' }, // Semua ukuran <= 1279px
+              },
         },
     },
 

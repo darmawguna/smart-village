@@ -5,7 +5,7 @@ import React from "react";
 const DetailReport = () => {
     return (
         <HomeLayout>
-            <div className="h-[78vh] mt-[80px] px-5">
+            <div className="flex flex-col min-h-screen mt-[80px] px-4">
                 <ButtonNavigate navigateTo="/report" variant="pointer">
                     <img
                         src="/assets/icons/back.png"
@@ -13,13 +13,13 @@ const DetailReport = () => {
                         className="w-7 h-7"
                     />
                 </ButtonNavigate>
-                <div className="flex justify-between">
+                <div className="flex justify-between md:flex-col md:justify-center md:items-center">
                     <img
                         src="/assets/images/background1.jpg"
                         alt="imgReport"
-                        className="w-[350px] h-[400px]"
+                        className="w-[350px] h-[400px] md:h-[350px]"
                     />
-                    <div className="w-[70%]">
+                    <div className="w-[70%] md:w-full lg:w-[55%]">
                         <h1 className="font-semibold text-2xl">Judul</h1>
                         <div className="flex gap-10">
                             <div className="flex gap-1">
