@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Produk;
 use App\Http\Requests\StoreProdukRequest;
 use App\Http\Requests\UpdateProdukRequest;
+use Inertia\Inertia;
 
 class ProdukController extends Controller
 {
@@ -13,7 +14,13 @@ class ProdukController extends Controller
      */
     public function index()
     {
-        //
+        $produk = Produk::paginate(15);
+
+        return Inertia::render('Product', [
+            'produk' => $produk
+        ]);
+
+
     }
 
     /**
@@ -37,7 +44,9 @@ class ProdukController extends Controller
      */
     public function show(Produk $produk)
     {
-        //
+        return Inertia::render('DetailProduct', [
+            "produk" => $produk
+        ]);
     }
 
     /**

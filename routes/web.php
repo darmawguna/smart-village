@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProdukController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
@@ -39,13 +40,18 @@ Route::get('/article', function () {
 Route::get('/articleDetail', function () {
     return Inertia::render('DetailArticle');
 });
-Route::get('/product', function () {
-    return Inertia::render('Product');
-});
-Route::get('/productDetail', function () {
-    return Inertia::render('DetailProduct');
-});
+// Route::get('/product', function () {
+//     return Inertia::render('Product');
+// });
+// Route::get('/productDetail', function () {
+//     return Inertia::render('DetailProduct');
+// });
 
+// Route Produk
+Route::get('product', [ProdukController::class, 'index']);
+
+
+// Route Dashboard
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

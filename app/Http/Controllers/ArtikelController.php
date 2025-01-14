@@ -1,10 +1,12 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Inertia\Inertia;
 use App\Models\Artikel;
+use App\Models\Kategori;
 use App\Http\Requests\StoreArtikelRequest;
 use App\Http\Requests\UpdateArtikelRequest;
+
 
 class ArtikelController extends Controller
 {
@@ -13,7 +15,12 @@ class ArtikelController extends Controller
      */
     public function index()
     {
-        //
+        $artikel = Artikel::paginate(15);
+        $kategori = Kategori::all();
+        return Inertia::render('Article', [
+            'artikel' => $artikel,
+            'kategori' => $kategori
+        ]);
     }
 
     /**
@@ -37,7 +44,9 @@ class ArtikelController extends Controller
      */
     public function show(Artikel $artikel)
     {
-        //
+        return Inertia::render('DetailArticle', [
+            'artikel' => $artikel
+        ]);
     }
 
     /**
