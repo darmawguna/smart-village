@@ -27,10 +27,10 @@ const NavBar = () => {
             <div className="flex justify-between w-[30em] items-center md:hidden">
                 <ButtonNavigate navigateTo="/home">Beranda</ButtonNavigate>
                 <ButtonNavigate navigateTo="/about">Tentang</ButtonNavigate>
-                <ButtonNavigate navigateTo="/report">
+                <ButtonNavigate navigateTo="/pelaporan">
                     Laporkan Kejadian
                 </ButtonNavigate>
-                <ButtonNavigate navigateTo="/article">Edukasi</ButtonNavigate>
+                <ButtonNavigate navigateTo="/artikel">Edukasi</ButtonNavigate>
                 <ButtonNavigate navigateTo="/product">Produk</ButtonNavigate>
                 <ButtonNavigate navigateTo="/admin">Admin</ButtonNavigate>
             </div>
@@ -54,7 +54,7 @@ const NavBar = () => {
                 </Button>
                 <ButtonNavigate navigateTo="/home">Beranda</ButtonNavigate>
                 <ButtonNavigate navigateTo="/about">Tentang</ButtonNavigate>
-                <ButtonNavigate navigateTo="/report">
+                <ButtonNavigate navigateTo="/pelaporan">
                     Laporkan Kejadian
                 </ButtonNavigate>
                 <ButtonNavigate navigateTo="/article">Edukasi</ButtonNavigate>

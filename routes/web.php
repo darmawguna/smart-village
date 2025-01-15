@@ -1,7 +1,10 @@
 <?php
 
+use App\Http\Controllers\ArtikelController;
+use App\Http\Controllers\LaporanController;
 use App\Http\Controllers\ProdukController;
 use App\Http\Controllers\ProfileController;
+use App\Models\Artikel;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -22,24 +25,24 @@ Route::get('/home', function () {
 Route::get('/about', function () {
     return Inertia::render('About');
 });
-Route::get('/report', function () {
-    return Inertia::render('ReportPage');
-});
+// Route::get('/report', function () {
+//     return Inertia::render('ReportPage');
+// });
 Route::get('/reportForm', function () {
     return Inertia::render('ReportForm');
 });
-Route::get('/allReportHistory', function () {
-    return Inertia::render('AllReport');
-});
-Route::get('/reportDetail', function () {
-    return Inertia::render('DetailReport');
-});
-Route::get('/article', function () {
-    return Inertia::render('Article');
-});
-Route::get('/articleDetail', function () {
-    return Inertia::render('DetailArticle');
-});
+// Route::get('/allReportHistory', function () {
+//     return Inertia::render('AllReport');
+// });
+// Route::get('/reportDetail', function () {
+//     return Inertia::render('DetailReport');
+// });
+// Route::get('/article', function () {
+//     return Inertia::render('Article');
+// });
+// Route::get('/articleDetail', function () {
+//     return Inertia::render('DetailArticle');
+// });
 // Route::get('/product', function () {
 //     return Inertia::render('Product');
 // });
@@ -47,8 +50,20 @@ Route::get('/articleDetail', function () {
 //     return Inertia::render('DetailProduct');
 // });
 
+// Route Pelaporan publik
+Route::get('pelaporan', [LaporanController::class, 'index']);
+Route::get('pelaporan/{id}', [LaporanController::class, 'show']);
+Route::get('pelaporan/pelaporan-publik', [LaporanController::class, 'create']);
+
+
 // Route Produk
 Route::get('product', [ProdukController::class, 'index']);
+Route::get('product/{id}', [ProdukController::class, 'show']);
+
+
+// Route Artikel
+Route::get('artikel', [ArtikelController::class, 'index']);
+Route::get('artikel/{id}', [ArtikelController::class, 'show']);
 
 
 // Route Dashboard

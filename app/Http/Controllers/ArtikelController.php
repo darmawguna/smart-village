@@ -17,9 +17,11 @@ class ArtikelController extends Controller
     {
         $artikel = Artikel::paginate(15);
         $kategori = Kategori::all();
+        $storageBaseUrl = env('APP_URL') . '/storage';
         return Inertia::render('Article', [
             'artikel' => $artikel,
-            'kategori' => $kategori
+            'kategori' => $kategori,
+            'storageBaseUrl' => $storageBaseUrl
         ]);
     }
 
@@ -42,10 +44,13 @@ class ArtikelController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Artikel $artikel)
+    public function show($id)
     {
+        $storageBaseUrl = env('APP_URL') . '/storage';
+        $artikel = Artikel::findOrFail($id);
         return Inertia::render('DetailArticle', [
-            'artikel' => $artikel
+            'artikel' => $artikel,
+            'storageBaseUrl' => $storageBaseUrl
         ]);
     }
 

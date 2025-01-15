@@ -3,45 +3,40 @@ import WaButton from "@/Components/Elements/WaButton";
 import HomeLayout from "@/Layouts/HomeLayout";
 import React from "react";
 
-const DetailProduct = () => {
+const DetailProduct = (props) => {
+    const { produk, storageBaseUrl } = props
+    console.log(produk)
     return (
         <HomeLayout>
             <div className="flex flex-col min-h-screen px-4 mt-[80px]">
                 <ButtonNavigate navigateTo="/product" variant="pointer">
                     <img
                         src="/assets/icons/back.png"
+                        // src={`${ storageBaseUrl }/${ produk.gambar_produk }`}
                         alt="back"
                         className="w-7 h-7"
                     />
                 </ButtonNavigate>
                 <div className="flex justify-around sm:flex-col sm:justify-center sm:items-center">
                     <img
-                        src="/assets/images/background1.jpg"
+                        src={`${ storageBaseUrl }/${ produk.gambar_produk }`}
                         alt="productPhoto"
                         className="w-[450px] h-[450px] md:w-[300px] md:h-[300px] sm:w-full "
                     />
                     <div className="w-[50%] sm:w-full">
-                        <h1 className="text-2xl font-bold">Nama Produk</h1>
+                        <h1 className="text-2xl font-bold">{produk.nama}</h1>
                         <div className="flex justify-between">
-                        <span>Rp. 10.000/Kg</span>
-                        <span>Makanan</span>
-                        <span className="flex gap-1">
-                          <img src="/assets/icons/star.png" alt="star" className="w-5 h-5" /> 4.4
-                        </span>
+                            <span>Rp. {produk.harga}</span>
+                            <span>Makanan</span>
+                            {/* <span className="flex gap-1">
+                                <img src="/assets/icons/star.png" alt="star" className="w-5 h-5" /> 4.4
+                            </span> */}
                         </div>
                         <div className="h-[60vh]">
                             <h2>Description</h2>
                             <hr />
                             <p className="text-justify">
-                                Lorem ipsum dolor sit, amet consectetur
-                                adipisicing elit. Necessitatibus soluta tempore,
-                                eos repellat eligendi omnis dolore? Ad numquam
-                                non, illo laborum quia nemo modi itaque, debitis
-                                minima provident maiores? Eligendi iusto quae
-                                illum doloribus laudantium in deleniti
-                                inventore. Aspernatur maiores cumque, assumenda
-                                quisquam esse sed accusantium hic? Cum, nihil
-                                doloremque?
+                                {produk.deskripsi}
                             </p>
                         </div>
                         <WaButton

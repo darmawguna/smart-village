@@ -12,7 +12,9 @@ const Content = (props) => {
             <div className="w-full h-[110px] overflow-hidden">
                 <h2>Deskripsi</h2>
                 <hr />
-                <p className="text-justify text-[12px]">{children}</p>
+                <div className="text-justify text-[12px]" dangerouslySetInnerHTML=
+                    {{ __html: children }} />
+                {/* <p className="text-justify text-[12px]">{children}</p> */}
             </div>
         </div>
     );
