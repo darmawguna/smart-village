@@ -7,17 +7,18 @@ import React, { useState } from "react";
 
 const Product = (props) => {
     const { produk, storageBaseUrl } = props;
-    const dataProduk = produk.data;
-    const [searchTerm, setSearchTerm] = useState('');
-    
-      const handleSearchChange = (event) => {
+    const [searchTerm, setSearchTerm] = useState("");
+
+    // Handle perubahan input pada search bar
+    const handleSearchChange = (event) => {
         setSearchTerm(event.target.value);
-      };
-    
-      const filteredArtikel = artikel.data.filter((item) =>
-        item.judul.toLowerCase().includes(searchTerm.toLowerCase())
-      );
-      
+    };
+
+    // Filter produk berdasarkan searchTerm
+    const filteredProduk = produk.data.filter((item) =>
+        item.nama.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+
     return (
         <HomeLayout>
             <div className="flex justify-center min-h-screen mt-[80px] px-4 ">
@@ -44,7 +45,7 @@ const Product = (props) => {
                             <CardBanner images="/assets/images/produ1.png" />
                             <CardBanner images="/assets/images/produ1.png" />
                         </div>
-                        <div className=" ssm:hidden">
+                        <div className="ssm:hidden">
                             <img
                                 src="/assets/images/people.png"
                                 alt="people"
@@ -53,17 +54,16 @@ const Product = (props) => {
                         </div>
                     </div>
                     <div className="flex justify-center sm:justify-end mt-7">
-                        {/* TODO: perbarui sidebar ini untuk menyimpan data di state */}
                         <SearchBar
                             variant="w-[500px] sm:w-[300px]"
-                            placeholder="cari produk lainnya disini"
+                            placeholder="Cari produk lainnya di sini"
                             value={searchTerm}
                             onChange={handleSearchChange}
                         />
                     </div>
                     <div className="flex py-10 flex-wrap justify-center gap-5">
-                        {dataProduk.map((data, index) => {
-                            return (
+                        {filteredProduk.length > 0 ? (
+                            filteredProduk.map((data) => (
                                 <CardProduct
                                     key={data.id}
                                     prodImages={`${storageBaseUrl}/${data.gambar_produk}`}
@@ -71,16 +71,13 @@ const Product = (props) => {
                                     prodPrice={data.harga}
                                     prodStock="1"
                                     prodId={data.id}
-                                ></CardProduct>
-                            );
-                        })}
-
-                        {/* <CardProduct prodImages="/assets/images/produ1.png" />
-                    <CardProduct prodImages="/assets/images/produ1.png" />
-                    <CardProduct prodImages="/assets/images/produ1.png" />
-                    <CardProduct prodImages="/assets/images/produ1.png" />
-                    <CardProduct prodImages="/assets/images/produ1.png" />
-                    <CardProduct prodImages="/assets/images/produ1.png" /> */}
+                                />
+                            ))
+                        ) : (
+                            <p className="text-center text-gray-500">
+                                Tidak ada produk yang ditemukan.
+                            </p>
+                        )}
                     </div>
                 </div>
             </div>
