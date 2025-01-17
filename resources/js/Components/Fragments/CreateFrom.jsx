@@ -12,8 +12,23 @@ export default function CreateForm() {
         lokasi: '',
         gambar: null,
     });
-    // const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
-    // console.log(csrfToken)
+
+    const [previewImage, setPreviewImage] = useState(null); // State untuk menyimpan URL preview gambar
+
+    const handleImageChange = (e) => {
+        const file = e.target.files[0];
+        setData('gambar', file); // Mengupdate data form dengan gambar
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = () => {
+                setPreviewImage(reader.result); // Set preview URL dari gambar
+            };
+            reader.readAsDataURL(file);
+        } else {
+            setPreviewImage(null); // Reset preview jika tidak ada file yang dipilih
+        }
+    };
+
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -77,6 +92,7 @@ export default function CreateForm() {
                                     <option value="dalam proses">Dalam Proses</option>
                                     <option value="selesai">Selesai</option>
                                 </select>
+                                <p className='text-xs text-slate-400'>status laporan cukup dibiarkan</p>
                                 {errors.status && <div className="text-red-500 text-sm">{errors.status}</div>}
                             </div>
                         </div>
@@ -100,6 +116,7 @@ export default function CreateForm() {
                                     onChange={(e) => setData('kontak_pelapor', e.target.value)}
                                     className="w-full border rounded p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                                 />
+                                <p className='text-xs text-slate-400'>masukan nomor telepon jika setuju</p>
                                 {errors.kontak_pelapor && <div className="text-red-500 text-sm">{errors.kontak_pelapor}</div>}
                             </div>
 
@@ -130,11 +147,21 @@ export default function CreateForm() {
                             <label className="block text-sm font-medium text-gray-700">Gambar</label>
                             <input
                                 type="file"
-                                onChange={(e) => setData('gambar', e.target.files[0])}
+                                onChange={handleImageChange}
                                 className="w-full border rounded p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                             />
                             {errors.gambar && <div className="text-red-500 text-sm">{errors.gambar}</div>}
                         </div>
+                        {previewImage && (
+                            <div className="mt-4">
+                                <h3 className="text-sm font-medium text-gray-700">Preview Gambar:</h3>
+                                <img
+                                    src={previewImage}
+                                    alt="Preview"
+                                    className="max-w-full h-auto rounded-lg shadow-md"
+                                />
+                            </div>
+                        )}
                     </div>
                 </div>
                 <div className="text-center">
