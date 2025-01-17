@@ -58,6 +58,7 @@ const DetailArticle = (props) => {
                     </div>
 
                     {/* Form Comment */}
+                    {/* TODO buat form untuk komentar */}
                     {isCommentFormVisible && (
                         <div>
                             <InputComment />
@@ -70,6 +71,7 @@ const DetailArticle = (props) => {
                     <hr className="border-1 border-gray-700 my-4" />
 
                     {/* Display Comment */}
+                    {/* TODO : looping data artikel dari database sesuai dengan id yang sesuai */}
                     <div>
                         <h2 className="text-xl font-semibold mb-2">Riwayat Komentar</h2>
                         <div>

@@ -2,7 +2,7 @@ import React from "react";
 import ButtonNavigate from "../Elements/ButtonNavigate";
 
 const ReportHistory = (props) => {
-    const {reportImages, title, status, children, date} = props;
+    const { reportImages, title, status, children, date, id } = props;
     return (
         <div className="border-b-2 flex justify-between items-center py-2">
             <img
@@ -22,7 +22,7 @@ const ReportHistory = (props) => {
                 </p>
             </div>
             <span>{date}</span>
-            <ButtonNavigate navigateTo="/reportDetail">
+            <ButtonNavigate navigateTo={`pelaporan/${ id }`}>
                 <img
                     src="/assets/icons/next.png"
                     alt="next"

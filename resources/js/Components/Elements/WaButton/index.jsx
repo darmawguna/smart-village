@@ -6,14 +6,14 @@ const WaButton = (props) => {
 
     const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
-    return <Link
+    return <a
             href={whatsappURL}
             target="_blank"
             rel="noopener noreferrer"
             className={`${variant} hover:bg-color2`}
         >
             {children}
-        </Link>
+    </a>
 };
 
 export default WaButton;

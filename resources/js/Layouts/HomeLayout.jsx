@@ -2,10 +2,11 @@ import WaButton from "@/Components/Elements/WaButton";
 import Footer from "@/Components/Fragments/Footer";
 import NavBar from "@/Components/Fragments/NavBar";
 import React from "react";
-
+import { ToastContainer, toast } from 'react-toastify';
 const HomeLayout = ({ children }) => {
     return (
         <div>
+            <ToastContainer />
             <NavBar />
             {children}
             <WaButton

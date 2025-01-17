@@ -41,10 +41,10 @@ class LaporanResource extends Resource
 
 
     // TODO ubah ketika sudah siap melakukan pengujian 
-    // public static function canCreate(): bool
-    // {
-    //     return false;
-    // }
+    public static function canCreate(): bool
+    {
+        return false;
+    }
 
     public static function form(Form $form): Form
     {

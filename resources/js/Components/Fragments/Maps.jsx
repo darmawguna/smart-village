@@ -50,8 +50,8 @@ const Maps = () => {
                 <Polygon
                     positions={desaCoordinates}
                     pathOptions={{
-                        color: "yellow",
-                        fillColor: "lightyellow",
+                        color: "green",
+                        fillColor: "lightgreen",
                         fillOpacity: 0.5,
                     }}
                 >

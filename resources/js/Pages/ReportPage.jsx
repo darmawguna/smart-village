@@ -1,12 +1,18 @@
 import ButtonNavigate from "@/Components/Elements/ButtonNavigate";
 import ReportHistory from "@/Components/Fragments/ReportHistory";
 import HomeLayout from "@/Layouts/HomeLayout";
-import React from "react";
-
+import { React, useEffect } from "react";
+import { toast } from 'react-toastify';
 const ReportPage = (props) => {
-    const { laporan, storageBaseUrl } = props
+    const { laporan, storageBaseUrl, flash } = props
     const laporanData = laporan.data
-// console.log(laporan)
+
+    useEffect(() => {
+        if (flash.success) {
+            toast.success(flash.success);
+            // alert(flash.success); // Menampilkan pesan flash menggunakan alert
+        }
+    }, [flash]);
     return (
         <HomeLayout>
             <div className="flex flex-col min-h-screen px-4">
@@ -18,7 +24,7 @@ const ReportPage = (props) => {
                         </h1>
                         <div className="flex justify-center">
                             <ButtonNavigate
-                                navigateTo="/reportForm"
+                                navigateTo="/pelaporan-publik"
                                 variant="bg-color5 gap-3 w-[250px] py-2 flex justify-center items-center rounded-lg"
                             >
                                 <img
@@ -37,7 +43,7 @@ const ReportPage = (props) => {
                     <div className="w-[95%]">
                         <div className="flex justify-between">
                             <h3>Riwayat Laporan</h3>
-                            <ButtonNavigate navigateTo='/allReportHistory'>
+                            <ButtonNavigate navigateTo='/histori-pelaporan'>
                                 Selengkapnya
                             </ButtonNavigate>
                         </div>
@@ -48,6 +54,7 @@ const ReportPage = (props) => {
                                 laporanData.map((item, index) => {
                                     return (
                                         <ReportHistory
+                                            id={item.id}
                                             key={index}
                                             reportImages={`${ storageBaseUrl }/${ item.gambar }`}
                                             title={item.judul}
@@ -58,13 +65,6 @@ const ReportPage = (props) => {
                                     )
                                 })
                             }
-                            {/* <ReportHistory
-                                reportImages='/assets/images/background1.jpg'
-                                title='Kebakaran Dibanjar Jawa'
-                                status='done'
-                                children='loremipsum sit dolor amet.'
-                                date='12-12-2025' /> */}
-
                         </div>
                         {/* card history end */}
                     </div>

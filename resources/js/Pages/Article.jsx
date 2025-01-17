@@ -21,7 +21,6 @@ const Article = (props) => {
       <div className="flex flex-col min-h-screen mt-[80px] px-4">
         <div className="flex justify-between">
           <h1 className="text-color5 font-bold text-2xl">Artikel Edukasi</h1>
-          {/* TODO: perbarui search ini untuk menyimpan data di state */}
           <SearchBar
             placeholder="Cari artikel di sini"
             variant="border-none bg-white shadow-xl w-[300px]"

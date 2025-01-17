@@ -57,8 +57,8 @@ const NavBar = () => {
                 <ButtonNavigate navigateTo="/pelaporan">
                     Laporkan Kejadian
                 </ButtonNavigate>
-                <ButtonNavigate navigateTo="/article">Edukasi</ButtonNavigate>
-                <ButtonNavigate navigateTo="/product">Produk</ButtonNavigate>
+                <ButtonNavigate navigateTo="/artikel">Edukasi</ButtonNavigate>
+                <ButtonNavigate navigateTo="/produk">Produk</ButtonNavigate>
                 <ButtonNavigate navigateTo="/admin">Admin</ButtonNavigate>
             </div>
         </div>

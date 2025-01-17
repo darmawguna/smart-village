@@ -18,9 +18,20 @@ class Laporan extends Model
         return $query->where('status', '!=', self::STATUS_SELESAI);
     }
 
-    public $fillable = [
+    // public $fillable = [
+    //     'judul',
+    //     'deskripsi',
+    //     'status',
+    //     'nama_pelapor',
+    //     'kontak_pelapor',
+    //     'lokasi',
+    //     'gambar',
+    // ];
+
+    protected $fillable = [
         'judul',
         'deskripsi',
+        'tanggal_laporan',
         'status',
         'nama_pelapor',
         'kontak_pelapor',

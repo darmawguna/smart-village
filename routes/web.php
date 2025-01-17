@@ -28,9 +28,9 @@ Route::get('/about', function () {
 // Route::get('/report', function () {
 //     return Inertia::render('ReportPage');
 // });
-Route::get('/reportForm', function () {
-    return Inertia::render('ReportForm');
-});
+// Route::get('/reportForm', function () {
+//     return Inertia::render('ReportForm');
+// });
 // Route::get('/allReportHistory', function () {
 //     return Inertia::render('AllReport');
 // });
@@ -51,9 +51,11 @@ Route::get('/reportForm', function () {
 // });
 
 // Route Pelaporan publik
-Route::get('pelaporan', [LaporanController::class, 'index']);
+Route::get('pelaporan', [LaporanController::class, 'index'])->name('laporan.index');
 Route::get('pelaporan/{id}', [LaporanController::class, 'show']);
-Route::get('pelaporan/pelaporan-publik', [LaporanController::class, 'create']);
+Route::get('pelaporan-publik', [LaporanController::class, 'create']);
+Route::post('laporan', [LaporanController::class, 'store'])->name('laporan.store');
+Route::get('histori-pelaporan', [LaporanController::class, 'showAllReport']);
 
 
 // Route Produk

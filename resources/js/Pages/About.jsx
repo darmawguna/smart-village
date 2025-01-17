@@ -21,7 +21,7 @@ const About = () => {
                         </ul>
                     </section>
                 </div>
-                <div className="w-[40%] text-center mt-[90px] md:mt-[20px] md:mb-[30px]">
+                <div className="w-[40%] text-center mt-[90px] md:mt-[20px] md:mb-[30px] z-10">
                     <Maps/>
                     <p className="text-color5">Desa Pengejaran, Kecamatan Kintamani, Kabupaten Bangli</p>
                 </div>
