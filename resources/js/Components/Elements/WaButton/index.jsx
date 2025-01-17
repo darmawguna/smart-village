@@ -10,7 +10,7 @@ const WaButton = (props) => {
             href={whatsappURL}
             target="_blank"
             rel="noopener noreferrer"
-            className={`${variant}`}
+            className={`${variant} hover:bg-color2`}
         >
             {children}
         </Link>

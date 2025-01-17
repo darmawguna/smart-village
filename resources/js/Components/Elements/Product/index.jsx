@@ -2,6 +2,7 @@ import React from 'react'
 
 const ProductCard = (props) => {
     const { nama, jumlah, satuan, harga } = props;
+    
     return (
         <div>
             <h1>{nama}</h1>
