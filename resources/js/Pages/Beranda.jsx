@@ -10,7 +10,7 @@ const Beranda = () => {
                 <h1 className='text-[40px] sm:text-[30px] ssm:text-[20px] font-bold'>Selamat Datang di Smart Forest Village</h1>
                 <h2 className='text-[20px] sm:text-[15px] ssm:text-[13px] font-semibold'>Transformasi Desa Menuju Desa Cerdas dan Berkelanjutan</h2>
                 <p className='w-[500px] ssm:w-[400px] text-center text-[12px]'>Bersama, kita melestarikan hutan, meningkatkan ekonomi lokal, dan mendukung keseimbangan ekologi dengan inovasi digital.</p>
-                <ButtonNavigate navigateTo='/reportForm' variant="flex justify-center gap-2 rounded-lg bg-white w-[250px] p-3 mt-2">
+          <ButtonNavigate navigateTo='pelaporan/pelaporan-publik' variant="flex justify-center gap-2 rounded-lg bg-white w-[250px] p-3 mt-2">
                     <img src="/assets/icons/green-camera.png" alt="camera" className='w-7 h-7' />
                     <span className='text-[20px] font-semibold'>Laporkan Kejadian</span>
                 </ButtonNavigate>

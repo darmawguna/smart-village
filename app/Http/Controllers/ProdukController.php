@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Produk;
 use App\Http\Requests\StoreProdukRequest;
 use App\Http\Requests\UpdateProdukRequest;
+use Inertia\Inertia;
 
 class ProdukController extends Controller
 {
@@ -13,7 +14,14 @@ class ProdukController extends Controller
      */
     public function index()
     {
-        //
+        $produk = Produk::paginate(15);
+        $storageBaseUrl = env('APP_URL') . '/storage';
+        return Inertia::render('Product', [
+            'produk' => $produk,
+            'storageBaseUrl' => $storageBaseUrl
+        ]);
+
+
     }
 
     /**
@@ -35,9 +43,15 @@ class ProdukController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Produk $produk)
+    public function show($id)
     {
-        //
+
+        $produk = Produk::findOrFail($id);
+        $storageBaseUrl = env('APP_URL') . '/storage';
+        return Inertia::render('DetailProduct', [
+            "produk" => $produk,
+            'storageBaseUrl' => $storageBaseUrl
+        ]);
     }
 
     /**

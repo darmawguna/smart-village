@@ -3,7 +3,10 @@ import ReportHistory from "@/Components/Fragments/ReportHistory";
 import HomeLayout from "@/Layouts/HomeLayout";
 import React from "react";
 
-const ReportPage = () => {
+const ReportPage = (props) => {
+    const { laporan, storageBaseUrl } = props
+    const laporanData = laporan.data
+// console.log(laporan)
     return (
         <HomeLayout>
             <div className="flex flex-col min-h-screen px-4">
@@ -41,36 +44,27 @@ const ReportPage = () => {
                         <hr />
                         {/* card history start */}
                         <div>
-                        <ReportHistory
-                        reportImages='/assets/images/background1.jpg'
-                        title='Kebakaran Dibanjar Jawa'
-                        status='done'
-                        children='loremipsum sit dolor amet.'
-                        date='12-12-2025' />
-                        <ReportHistory
-                        reportImages='/assets/images/background1.jpg'
-                        title='Kebakaran Dibanjar Jawa'
-                        status='done'
-                        children='loremipsum sit dolor amet.'
-                        date='12-12-2025' />
-                        <ReportHistory
-                        reportImages='/assets/images/background1.jpg'
-                        title='Kebakaran Dibanjar Jawa'
-                        status='done'
-                        children='loremipsum sit dolor amet.'
-                        date='12-12-2025' />
-                        <ReportHistory
-                        reportImages='/assets/images/background1.jpg'
-                        title='Kebakaran Dibanjar Jawa'
-                        status='done'
-                        children='loremipsum sit dolor amet.'
-                        date='12-12-2025' />
-                        <ReportHistory
-                        reportImages='/assets/images/background1.jpg'
-                        title='Kebakaran Dibanjar Jawa'
-                        status='done'
-                        children='loremipsum sit dolor amet.'
-                        date='12-12-2025' />
+                            {
+                                laporanData.map((item, index) => {
+                                    return (
+                                        <ReportHistory
+                                            key={index}
+                                            reportImages={`${ storageBaseUrl }/${ item.gambar }`}
+                                            title={item.judul}
+                                            status={item.status}
+                                            children={item.deskripsi}
+                                            date={item.created_at}
+                                        />
+                                    )
+                                })
+                            }
+                            {/* <ReportHistory
+                                reportImages='/assets/images/background1.jpg'
+                                title='Kebakaran Dibanjar Jawa'
+                                status='done'
+                                children='loremipsum sit dolor amet.'
+                                date='12-12-2025' /> */}
+
                         </div>
                         {/* card history end */}
                     </div>

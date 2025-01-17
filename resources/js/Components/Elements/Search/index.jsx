@@ -1,7 +1,7 @@
 import React from "react";
 
 const SearchBar = (props) => {
-    const { placeholder, variant } = props;
+    const { placeholder, variant, value, onChange } = props;
 
     return (
         <div className="relative">
@@ -13,6 +13,8 @@ const SearchBar = (props) => {
             <input
                 type="search"
                 placeholder={placeholder}
+                value={value}
+                onChange={onChange}
                 className={`pl-10 rounded-full ${variant}`}
             />
         </div>

@@ -1,10 +1,12 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Inertia\Inertia;
 use App\Models\Artikel;
+use App\Models\Kategori;
 use App\Http\Requests\StoreArtikelRequest;
 use App\Http\Requests\UpdateArtikelRequest;
+
 
 class ArtikelController extends Controller
 {
@@ -13,7 +15,14 @@ class ArtikelController extends Controller
      */
     public function index()
     {
-        //
+        $artikel = Artikel::paginate(15);
+        $kategori = Kategori::all();
+        $storageBaseUrl = env('APP_URL') . '/storage';
+        return Inertia::render('Article', [
+            'artikel' => $artikel,
+            'kategori' => $kategori,
+            'storageBaseUrl' => $storageBaseUrl
+        ]);
     }
 
     /**
@@ -35,9 +44,14 @@ class ArtikelController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Artikel $artikel)
+    public function show($id)
     {
-        //
+        $storageBaseUrl = env('APP_URL') . '/storage';
+        $artikel = Artikel::findOrFail($id);
+        return Inertia::render('DetailArticle', [
+            'artikel' => $artikel,
+            'storageBaseUrl' => $storageBaseUrl
+        ]);
     }
 
     /**
