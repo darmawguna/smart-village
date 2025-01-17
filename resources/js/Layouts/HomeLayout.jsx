@@ -10,7 +10,7 @@ const HomeLayout = ({ children }) => {
             {children}
             <WaButton
                 phoneNumber="6282147389276"
-                variant="rounded-full p-2 bg-color5 fixed right-0 bottom-0 m-4"
+                variant="rounded-full p-2 bg-color5 fixed right-0 bottom-0 m-4 z-50"
             >
                 <img src="/assets/icons/cs.png" alt="cs" className="w-7 h-7" />
             </WaButton>

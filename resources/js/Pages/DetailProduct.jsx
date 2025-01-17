@@ -38,10 +38,10 @@ const DetailProduct = (props) => {
                                 </p>
                             </div>
                         </div>
-                        <div className="mt-4 w-full">
+                        <div className="mt-4">
                             <WaButton
                                 phoneNumber="6282147389276"
-                                variant="rounded-lg py-2 px-[40%] bg-color5 text-white text-center text-xl w-full"
+                                variant="rounded-lg py-2 px-[40%] md:px-[20%] lg:px-[30%] bg-color5 text-white text-center text-xl"
                             >
                                 Beli Sekarang
                             </WaButton>

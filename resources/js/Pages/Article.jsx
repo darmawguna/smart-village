@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import ButtonNavigate from '@/Components/Elements/ButtonNavigate';
 import SearchBar from '@/Components/Elements/Search';
 import CardArticle from '@/Components/Fragments/CardArticle';
 import HomeLayout from '@/Layouts/HomeLayout';
+import ButtonElements from '@/Components/Elements/Button';
 
 const Article = (props) => {
   const { artikel, storageBaseUrl, kategori } = props;
@@ -29,14 +29,14 @@ const Article = (props) => {
             onChange={handleSearchChange}
           />
         </div>
-        <div className="flex gap-10 py-4">
+        <div className="flex gap-10 py-4 ssm:justify-center">
           {kategori.map((item) => (
-            <ButtonNavigate
+            <ButtonElements
               key={item.id}
               variant="bg-white shadow-xl py-4 px-6 rounded-full"
             >
               {item.name}
-            </ButtonNavigate>
+            </ButtonElements>
           ))}
         </div>
         <div className="flex py-10 flex-wrap justify-center gap-5">
