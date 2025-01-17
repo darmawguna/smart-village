@@ -52,7 +52,7 @@ const DetailArticle = (props) => {
                             <img
                                 src="/assets/icons/next.png"
                                 alt="next"
-                                className={`w-5 h-5 ${rotateIcon}`} 
+                                className={`w-5 h-5 rotate-90 ${rotateIcon}`} 
                             />
                         </button>
                     </div>
