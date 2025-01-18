@@ -7,14 +7,21 @@ import ButtonElements from '@/Components/Elements/Button';
 const Article = (props) => {
   const { artikel, storageBaseUrl, kategori } = props;
   const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState(null); // State untuk kategori yang dipilih
 
   const handleSearchChange = (event) => {
     setSearchTerm(event.target.value);
   };
 
-  const filteredArtikel = artikel.data.filter((item) =>
-    item.judul.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  const handleCategoryClick = (categoryId) => {
+    setSelectedCategory(categoryId);
+  };
+
+  const filteredArtikel = artikel.data.filter((item) => {
+    const matchesSearch = item.judul.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesCategory = selectedCategory ? item.kategori_id === selectedCategory : true;
+    return matchesSearch && matchesCategory;
+  });
 
   return (
     <HomeLayout>
@@ -32,7 +39,10 @@ const Article = (props) => {
           {kategori.map((item) => (
             <ButtonElements
               key={item.id}
-              variant="bg-white shadow-xl py-4 px-6 rounded-full"
+              onClick={() => handleCategoryClick(item.id)}
+              variant={`bg-white shadow-xl py-4 px-6 rounded-full ${
+                selectedCategory === item.id ? 'bg-gray-200' : ''
+              }`}
             >
               {item.name}
             </ButtonElements>
