@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\Komentar;
 use Inertia\Inertia;
 use App\Models\Artikel;
 use App\Models\Kategori;
@@ -48,10 +49,13 @@ class ArtikelController extends Controller
     {
         $storageBaseUrl = env('APP_URL') . '/storage';
         $artikel = Artikel::findOrFail($id);
+        $komentar = Komentar::where('artikel_id', $id)->get();
         return Inertia::render('DetailArticle', [
             'artikel' => $artikel,
-            'storageBaseUrl' => $storageBaseUrl
+            'storageBaseUrl' => $storageBaseUrl,
+            'komentar' => $komentar
         ]);
+
     }
 
     /**

@@ -14,7 +14,7 @@ const NavBar = () => {
     return (
         <div className="flex justify-between px-4 py-2 shadow-xl h-[10vh] items-center fixed top-0 w-[100%] z-50 bg-white">
             <ButtonNavigate
-                navigateTo="/home"
+                navigateTo="/"
                 variant="flex gap-3 items-center"
             >
                 <img
@@ -25,7 +25,7 @@ const NavBar = () => {
                 <h1 className="font-bold text-2xl">Smart Forest Village</h1>
             </ButtonNavigate>
             <div className="flex justify-between w-[30em] items-center md:hidden">
-                <ButtonNavigate navigateTo="/home">Beranda</ButtonNavigate>
+                <ButtonNavigate navigateTo="/">Beranda</ButtonNavigate>
                 <ButtonNavigate navigateTo="/about">Tentang</ButtonNavigate>
                 <ButtonNavigate navigateTo="/pelaporan">
                     Laporkan Kejadian
@@ -52,7 +52,7 @@ const NavBar = () => {
                 <Button onClick={toggleSidebar}>
                     <img src="/assets/icons/close.png" alt="close" className="w-7 h-7" />
                 </Button>
-                <ButtonNavigate navigateTo="/home">Beranda</ButtonNavigate>
+                <ButtonNavigate navigateTo="/">Beranda</ButtonNavigate>
                 <ButtonNavigate navigateTo="/about">Tentang</ButtonNavigate>
                 <ButtonNavigate navigateTo="/pelaporan">
                     Laporkan Kejadian

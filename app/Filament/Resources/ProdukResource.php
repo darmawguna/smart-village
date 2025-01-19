@@ -43,7 +43,7 @@ class ProdukResource extends Resource
                     ->numeric()
                     ->required()
                     ->helperText('Masukkan angka tanpa titik atau koma, otomatis akan diformat.')
-                    ->dehydrateStateUsing(fn($state) => str_replace('.', '', $state)) // Hapus format titik sebelum menyimpan
+                    ->dehydrateStateUsing(fn($state) => str_replace('.', '', $state))
                     ->afterStateHydrated(function ($state, callable $set) {
                         if (!empty($state)) {
                             $set('harga', number_format($state, 0, ',', '.'));
