@@ -45,7 +45,7 @@ const NavBar = () => {
             </div>
             <div
                 id="sidebar"
-                className={`fixed right-0 top-0 h-screen w-[30%] bg-white z-50 p-4 transform transition-transform duration-300 ${
+                className={`fixed right-0 top-0 h-screen w-[30%] ssm:w-[50%] bg-white z-50 p-4 transform transition-transform duration-300 ${
                     isSidebarVisible ? "translate-x-0" : "translate-x-full"
                 }`}
             >
@@ -58,7 +58,7 @@ const NavBar = () => {
                     Laporkan Kejadian
                 </ButtonNavigate>
                 <ButtonNavigate navigateTo="/artikel">Edukasi</ButtonNavigate>
-                <ButtonNavigate navigateTo="/produk">Produk</ButtonNavigate>
+                <ButtonNavigate navigateTo="/product">Produk</ButtonNavigate>
                 <ButtonNavigate navigateTo="/admin">Admin</ButtonNavigate>
             </div>
         </div>

@@ -6,7 +6,7 @@ import React from 'react'
 const ReportForm = () => {
   return (
     <HomeLayout>
-      <div className='flex flex-col min-h-screen mt-[80px] px-4'>
+      <div className='flex flex-col min-h-screen mt-[80px] lg:mt-[100px] px-4'>
         {/* <FormReport/> */}
         <div>
           <CreateForm />

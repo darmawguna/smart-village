@@ -25,7 +25,7 @@ const AllReport = (props) => {
     return (
         <HomeLayout>
             <div className="flex justify-center min-h-screen px-4">
-                <div className="w-[95%] mt-[80px]">
+                <div className="w-[95%] mt-[80px] lg:mt-[130px]">
                     <div className="flex justify-between mb-4 sm:flex-col">
                         <h1 className="font-bold text-2xl">Riwayat Seluruh Laporan</h1>
                         {/* Search bar dengan event onChange */}

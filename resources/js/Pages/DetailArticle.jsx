@@ -41,7 +41,7 @@ const DetailArticle = (props) => {
 
     return (
         <HomeLayout>
-            <div className="flex flex-col min-h-screen px-4 mt-[80px]">
+            <div className="flex flex-col min-h-screen px-4 mt-[80px] lg:mt-[130px]">
                 <ButtonNavigate navigateTo="/artikel" variant="pointer">
                     <img
                         src="/assets/icons/back.png"
