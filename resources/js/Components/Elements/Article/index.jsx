@@ -15,10 +15,10 @@ const ArticleCard = (props) => {
             date={dates}
             children={childrens} />
         </div>
-        <div className="flex justify-center mt-10">
+        <div className="flex justify-center mt-10 ssm:mt-0">
           <ButtonNavigate
             navigateTo={`/artikel/${ id }`}
-            variant="bg-white shadow-xl py-1 rounded-full flex justify-center text-[15px] w-[50%]"
+            variant="bg-white shadow-xl py-1 rounded-full flex justify-center text-[15px] ssm:text-[10px] w-[50%]"
           >
             Selengkapnya
           </ButtonNavigate>

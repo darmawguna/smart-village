@@ -16,7 +16,7 @@ const ReportHistory = (props) => {
 
     return (
         <div className="border-b-2 flex justify-between items-center py-2">
-            <div className="flex gap-3 w-[70%]">
+            <div className="flex gap-3 w-[70%] ">
                 <img
                     src={`${reportImages}`}
                     alt="reportImg"
@@ -34,7 +34,7 @@ const ReportHistory = (props) => {
                     </p>
                 </div>
             </div>
-            <span>{formatDate(date)}</span>
+            <span className="ssm:text-[10px]">{formatDate(date)}</span>
             <ButtonNavigate navigateTo={`pelaporan/${id}`}>
                 <img
                     src="/assets/icons/next.png"

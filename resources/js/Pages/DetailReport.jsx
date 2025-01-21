@@ -16,7 +16,7 @@ const DetailReport = (props) => {
     // console.log(laporan)
     return (
         <HomeLayout>
-            <div className="flex flex-col min-h-screen mt-[80px] px-4">
+            <div className="flex flex-col min-h-screen mt-[80px] lg:mt-[130px] px-4">
                 <ButtonNavigate navigateTo="/pelaporan" variant="pointer">
                     <img
                         src="/assets/icons/back.png"
@@ -30,7 +30,7 @@ const DetailReport = (props) => {
                         alt="imgReport"
                         className="w-[350px] h-[400px] md:h-[350px]"
                     />
-                    <div className="w-[70%] md:w-full lg:w-[55%]">
+                    <div className="w-[70%] ssm:w-full md:w-full lg:w-[55%]">
                         <h1 className="font-semibold text-2xl">
                             {laporan.judul}
                         </h1>

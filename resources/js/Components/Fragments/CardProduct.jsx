@@ -11,7 +11,7 @@ const CardProduct = (props) => {
                 <ProductCard 
                     nama={prodName}
                     jumlah={prodStock}
-                    satuan='ikat'
+                    // satuan='ikat'
                     harga={prodPrice}
 
                 />

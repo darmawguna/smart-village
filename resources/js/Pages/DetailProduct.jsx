@@ -8,7 +8,7 @@ const DetailProduct = (props) => {
     console.log(produk);
     return (
         <HomeLayout>
-            <div className="flex flex-col min-h-screen px-4 mt-[80px]">
+            <div className="flex flex-col min-h-screen px-4 mt-[80px] lg:mt-[130px]">
                 <ButtonNavigate navigateTo="/product" variant="pointer">
                     <img
                         src="/assets/icons/back.png"
@@ -26,7 +26,7 @@ const DetailProduct = (props) => {
                     <div className="w-[50%] sm:w-full">
                         <h1 className="text-2xl font-bold">{produk.nama}</h1>
                         <div className="flex justify-between items-center">
-                            <span>Rp. {produk.harga}</span>
+                            <span>{new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR' }).format(produk.harga)}</span>
                             <span>Makanan</span>
                         </div>
                         <div className="h-[60vh] w-full overflow-auto">
@@ -40,7 +40,7 @@ const DetailProduct = (props) => {
                         </div>
                         <div className="mt-4">
                             <WaButton
-                                phoneNumber="6282147389276"
+                                phoneNumber="6281338690502"
                                 variant="rounded-lg py-2 px-[40%] md:px-[20%] lg:px-[30%] bg-color5 text-white text-center text-xl"
                             >
                                 Beli Sekarang

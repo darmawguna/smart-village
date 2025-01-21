@@ -21,7 +21,7 @@ const Product = (props) => {
 
     return (
         <HomeLayout>
-            <div className="flex justify-center min-h-screen mt-[80px] px-4 ">
+            <div className="flex justify-center min-h-screen mt-[80px] lg:mt-[130px] px-4 ">
                 <div className="flex flex-col w-[95%]">
                     <div className="bg-color5 h-[40vh] flex justify-between items-center px-10 rounded-lg">
                         <div className="ssm:flex ssm:flex-col ssm:items-center ssm:justify-center">
@@ -68,7 +68,7 @@ const Product = (props) => {
                                     key={data.id}
                                     prodImages={`${storageBaseUrl}/${data.gambar_produk}`}
                                     prodName={data.nama}
-                                    prodPrice={data.harga}
+                                    prodPrice={new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR' }).format(data.harga)}
                                     prodStock="1"
                                     prodId={data.id}
                                 />

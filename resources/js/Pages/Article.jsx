@@ -25,17 +25,17 @@ const Article = (props) => {
 
   return (
     <HomeLayout>
-      <div className="flex flex-col min-h-screen mt-[80px] px-4">
-        <div className="flex justify-between">
-          <h1 className="text-color5 font-bold text-2xl">Artikel Edukasi</h1>
+      <div className="flex flex-col min-h-screen mt-[80px] px-4 lg:mt-[130px]">
+        <div className="flex justify-between ssm:flex-col">
+          <h1 className="text-color5 font-bold text-2xl ssm:mb-3">Artikel Edukasi</h1>
           <SearchBar
             placeholder="Cari artikel di sini"
-            variant="border-none bg-white shadow-xl w-[300px]"
+            variant="border-none bg-white shadow-xl w-[300px] ssm:w-full"
             value={searchTerm}
             onChange={handleSearchChange}
           />
         </div>
-        <div className="flex gap-10 py-4 ssm:justify-center">
+        <div className="flex gap-10 py-4 ssm:py-2 ssm:justify-center">
           {kategori.map((item) => (
             <ButtonElements
               key={item.id}
