@@ -6,7 +6,7 @@ const About = () => {
     return (
         <HomeLayout>
             <div className="flex min-h-screen px-4 justify-around md:flex-col md:justify-center md:items-center">
-                <div className="w-[50%] ssm:w-full md:w-full lg:w-full mt-[90px] lg:mt-[130px] text-justify">
+                <div className="w-[50%] ssm:w-full md:w-full lg:w-full mt-[90px] ssm:mt-[80px] lg:mt-[130px] text-justify">
                     <section className="mb-6">
                         <h1 className="font-bold text-2xl mb-2 md:text-center">Smart Forest Village</h1>
                         <p>Smart Forest Village merupakan platform manajemen pengelolaan hutan dan hasil hutan Desa Pengejaran. Desa Pengejaran merupakan salah satu desa yang terletak di Kecamatan Kintamani, Kabupaten Bangli, Provinsi Bali memiliki luas daerah 666 Ha, dengan rincian 150 Ha adalah hutan, 640 Ha adalah lahan pertanian/perkebunan, dan 56 Ha adalah pemukiman warga.</p>
