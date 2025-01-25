@@ -48,7 +48,7 @@ const Article = (props) => {
             </ButtonElements>
           ))}
         </div>
-        <div className="flex py-10 flex-wrap justify-around">
+        <div className="flex py-10 flex-wrap justify-center gap-5 ssm:justify-around">
           {filteredArtikel.length > 0 ? (
             filteredArtikel.map((item) => (
               <CardArticle
