@@ -53,8 +53,11 @@ const ReportHistory = (props) => {
                             <img
                             src={getStatusIcon(status)}
                             alt={status}
-                            className="w-5 h-5"
+                            className="w-5 h-5 hidden ssm:block"
                         />
+                        <span className="ssm:hidden">
+                        {status}
+                        </span>
                         </div>
                     </div>
                     <p className="line-clamp-3 ssm:text-[10px] h-[30px]">
