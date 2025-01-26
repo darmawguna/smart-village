@@ -46,15 +46,18 @@ const ReportHistory = (props) => {
                 />
                 <div className="overflow-hidden">
                     <div className="flex gap-2">
-                        <h2 className="font-semibold w-[100px] truncate">{title}</h2>
+                        <h2 className="font-semibold ssm:w-[100px] truncate">{title}</h2>
                         <div
                             className={`text-[10px] text-white flex rounded-lg px-2 text-center items-center ${getStatusColor(status)}`}
                         >
                             <img
                             src={getStatusIcon(status)}
                             alt={status}
-                            className="w-5 h-5"
+                            className="w-5 h-5 hidden ssm:block"
                         />
+                        <span className="ssm:hidden">
+                        {status}
+                        </span>
                         </div>
                     </div>
                     <p className="line-clamp-3 ssm:text-[10px] h-[30px]">
