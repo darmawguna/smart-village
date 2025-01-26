@@ -3,19 +3,17 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\ProdukResource\Pages;
-use App\Filament\Resources\ProdukResource\RelationManagers;
 use App\Models\Produk;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Columns\ImageColumn;
 use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\TextArea;
 use Filament\Notifications\Notification;
 
 
@@ -58,7 +56,7 @@ class ProdukResource extends Resource
                     ->appendFiles()
                     ->visibility('public')
                     ->columnSpan(2),
-                Forms\Components\TextArea::make('deskripsi')
+                TextArea::make('deskripsi')
                     ->required()
                     ->maxLength(65535)
                     ->columnSpan(2),

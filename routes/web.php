@@ -12,45 +12,12 @@ use Inertia\Inertia;
 use Illuminate\Http\Request;
 
 
-// Route::get('/', function () {
-//     return Inertia::render('Welcome', [
-//         'canLogin' => Route::has('login'),
-//         'canRegister' => Route::has('register'),
-//         'laravelVersion' => Application::VERSION,
-//         'phpVersion' => PHP_VERSION,
-//     ]);
-// });
-
 Route::get('/', function () {
     return Inertia::render('Beranda');
 });
 Route::get('/about', function () {
     return Inertia::render('About');
 });
-// Route::get('/report', function () {
-//     return Inertia::render('ReportPage');
-// });
-// Route::get('/reportForm', function () {
-//     return Inertia::render('ReportForm');
-// });
-// Route::get('/allReportHistory', function () {
-//     return Inertia::render('AllReport');
-// });
-// Route::get('/reportDetail', function () {
-//     return Inertia::render('DetailReport');
-// });
-// Route::get('/article', function () {
-//     return Inertia::render('Article');
-// });
-// Route::get('/articleDetail', function () {
-//     return Inertia::render('DetailArticle');
-// });
-// Route::get('/product', function () {
-//     return Inertia::render('Product');
-// });
-// Route::get('/productDetail', function () {
-//     return Inertia::render('DetailProduct');
-// });
 
 // Route Pelaporan publik
 Route::get('pelaporan', [LaporanController::class, 'index'])->name('laporan.index');
@@ -97,4 +64,4 @@ Route::post('/upload-artikel-file', function (Request $request) {
     ]);
 })->name('upload.artikel.file');
 
-require __DIR__.'/auth.php';
+// require __DIR__.'/auth.php';
