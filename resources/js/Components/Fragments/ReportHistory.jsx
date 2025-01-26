@@ -46,7 +46,7 @@ const ReportHistory = (props) => {
                 />
                 <div className="overflow-hidden">
                     <div className="flex gap-2">
-                        <h2 className="font-semibold w-[100px] truncate">{title}</h2>
+                        <h2 className="font-semibold ssm:w-[100px] truncate">{title}</h2>
                         <div
                             className={`text-[10px] text-white flex rounded-lg px-2 text-center items-center ${getStatusColor(status)}`}
                         >
