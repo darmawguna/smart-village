@@ -13,7 +13,7 @@ use Filament\Tables\Table;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Columns\ImageColumn;
 use Filament\Forms\Components\FileUpload;
-use Filament\Forms\Components\TextArea;
+use Filament\Forms\Components\Textarea;
 use Filament\Notifications\Notification;
 
 
@@ -56,7 +56,7 @@ class ProdukResource extends Resource
                     ->appendFiles()
                     ->visibility('public')
                     ->columnSpan(2),
-                TextArea::make('deskripsi')
+                Textarea::make('deskripsi')
                     ->required()
                     ->maxLength(65535)
                     ->columnSpan(2),
