@@ -59,6 +59,7 @@ const ReportHistory = (props) => {
                         {status}
                         </span>
                         </div>
+                        
                     </div>
                     <p className="line-clamp-3 ssm:text-[10px] h-[30px]">
                         {children}
