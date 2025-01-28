@@ -11,7 +11,7 @@ const Content = (props) => {
 
     return (
         <div>
-            <h1 className="text-[20px] ssm:text-[12px]">{title}</h1>
+            <h1 className="text-[20px] ssm:text-[12px] w-full ssm:h-[20px] ssm:truncate">{title}</h1>
             <div className="flex gap-1 ssm:justify-end">
                 <img
                     src="/assets/icons/calendar.png"
@@ -20,7 +20,7 @@ const Content = (props) => {
                 />
                 <span className="text-[12px] ssm:text-[8px]">{formatDate(date)}</span>
             </div>
-            <div className="w-full h-[110px] ssm:h-[70px] overflow-hidden">
+            <div className="w-full h-[90px] ssm:h-[70px] overflow-hidden">
                 <h2 className="ssm:text-[10px]">Deskripsi</h2>
                 <hr />
                 <div
