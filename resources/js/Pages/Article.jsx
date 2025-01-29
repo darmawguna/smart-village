@@ -25,7 +25,7 @@ const Article = (props) => {
 
   return (
     <HomeLayout>
-      <div className="flex flex-col min-h-screen mt-[80px] ssm:mt-[80px] px-4 lg:mt-[130px]">
+      <div className="flex flex-col min-h-screen mt-[80px] sm:mt-[80px] px-4 lg:mt-[130px]">
         <div className="flex justify-between ssm:flex-col">
           <h1 className="text-color5 font-bold text-2xl ssm:mb-3">Artikel Edukasi</h1>
           <SearchBar

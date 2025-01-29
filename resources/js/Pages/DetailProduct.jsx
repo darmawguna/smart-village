@@ -8,7 +8,7 @@ const DetailProduct = (props) => {
     console.log(produk);
     return (
         <HomeLayout>
-            <div className="flex flex-col min-h-screen px-4 mt-[80px] ssm:mt-[80px] lg:mt-[130px]">
+            <div className="flex flex-col min-h-screen px-4 mt-[80px] sm:mt-[80px] lg:mt-[130px]">
                 <ButtonNavigate navigateTo="/product" variant="pointer">
                     <img
                         src="/assets/icons/back.png"

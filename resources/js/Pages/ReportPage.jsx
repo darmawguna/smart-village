@@ -16,7 +16,7 @@ const ReportPage = (props) => {
     return (
         <HomeLayout>
             <div className="flex flex-col min-h-screen px-4">
-                <div className="flex justify-center mt-[80px] ssm:mt-[80px] lg:mt-[130px]">
+                <div className="flex justify-center mt-[80px] sm:mt-[80px] lg:mt-[130px]">
                     <div className="text-center">
                         <h1 className="font-bold text-2xl mb-2">
                             Ini Adalah Halaman Untuk Melihat & Melaporkan

@@ -16,7 +16,7 @@ const DetailReport = (props) => {
     // console.log(laporan)
     return (
         <HomeLayout>
-            <div className="flex flex-col min-h-screen mt-[80px] ssm:mt-[80px] lg:mt-[130px] px-4">
+            <div className="flex flex-col min-h-screen mt-[80px] sm:mt-[80px] lg:mt-[130px] px-4">
                 <ButtonNavigate navigateTo="/pelaporan" variant="pointer">
                     <img
                         src="/assets/icons/back.png"
