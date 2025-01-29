@@ -69,7 +69,6 @@ const Product = (props) => {
                                     prodImages={`${storageBaseUrl}/${data.gambar_produk}`}
                                     prodName={data.nama}
                                     prodPrice={new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR' }).format(data.harga)}
-                                    prodStock="1"
                                     prodId={data.id}
                                 />
                             ))
