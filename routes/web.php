@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ArtikelController;
+use App\Http\Controllers\BerandaController;
 use App\Http\Controllers\KomentarController;
 use App\Http\Controllers\LaporanController;
 use App\Http\Controllers\ProdukController;
@@ -12,9 +13,8 @@ use Inertia\Inertia;
 use Illuminate\Http\Request;
 
 
-Route::get('/', function () {
-    return Inertia::render('Beranda');
-});
+Route::get('/', [BerandaController::class, 'index']);
+
 Route::get('/about', function () {
     return Inertia::render('About');
 });

@@ -14,14 +14,12 @@ class ProdukController extends Controller
      */
     public function index()
     {
-        $produk = Produk::paginate(15);
+        $produk = Produk::all();
         $storageBaseUrl = env('APP_URL') . '/storage';
         return Inertia::render('Product', [
             'produk' => $produk,
             'storageBaseUrl' => $storageBaseUrl
         ]);
-
-
     }
 
     /**

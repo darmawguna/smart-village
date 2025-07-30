@@ -1,15 +1,23 @@
-import React from 'react'
+import React from "react";
 
-const ProductCard = (props) => {
-    const { nama, 
-         harga } = props;
-    
+const ProductCard = ({ nama, harga, deskripsi }) => {
     return (
-        <div class="flex flex-col justify-between h-[100px]">
-    <h1>{nama}</h1>
-    <h3>{harga}</h3>
-</div>
+        <div className="flex flex-col justify-between h-full">
+            <div>
+                <h2 className="text-lg font-semibold text-gray-800 mb-2 line-clamp-2">
+                    {nama}
+                </h2>
+                {deskripsi && (
+                    <p className="text-sm text-gray-600 mb-3 line-clamp-2">
+                        {deskripsi}
+                    </p>
+                )}
+            </div>
+            <div className="text-xl font-bold text-green-600 mb-3">
+                {harga}
+            </div>
+        </div>
     );
-}
+};
 
-export default ProductCard
+export default ProductCard;

@@ -32,6 +32,7 @@ export default {
             },
             backgroundImage: {
                 "img1": "url('/assets/images/background1.jpg')",
+                "bg-video": "url('/assets/videos/pengejaran.mp4')",
             },
             screens: {
                 ssm: { max: '550px' },
