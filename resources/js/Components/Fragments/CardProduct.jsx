@@ -8,7 +8,7 @@ const CardProduct = ({
     prodPrice, 
     prodDescription,
     prodId,
-    phoneNumber = "6281338690502",
+    phoneNumber = "6281233996035",
     className = "",
     style = {}
 }) => {
