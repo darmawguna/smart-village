@@ -32,7 +32,7 @@ const NavBar = () => {
                 </ButtonNavigate>
                 <ButtonNavigate navigateTo="/artikel">Edukasi</ButtonNavigate>
                 <ButtonNavigate navigateTo="/product">Produk</ButtonNavigate>
-                <ButtonNavigate navigateTo="/admin">Admin</ButtonNavigate>
+                {/* <ButtonNavigate navigateTo="/admin">Admin</ButtonNavigate> */}
             </div>
             <div id="menuBtn" className="hidden md:flex" onClick={toggleSidebar}>
                 <ButtonElements>
