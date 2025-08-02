@@ -17,7 +17,8 @@ class ProdukController extends Controller
         $produk = Produk::all();
         $storageBaseUrl = env('APP_URL') . '/storage';
         return Inertia::render('Product', [
-            'produk' => $produk,
+            // Benar: bungkus array dalam key 'data'
+            'produk' => ['data' => $produk],
             'storageBaseUrl' => $storageBaseUrl
         ]);
     }
