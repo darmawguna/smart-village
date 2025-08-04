@@ -10,7 +10,7 @@ const About = () => {
                     <section className="mb-6">
                         <h1 className="font-bold text-2xl mb-2 md:text-center">Smart Forest Village</h1>
                         <p>Smart Forest Village merupakan platform pemasaran hasil hutan dan manajemen pengelolaan hutan di Desa Pengejaran. Desa berada di ketinggian 1.200m dari permukaan laut (dpl). Mempunyai batas- batas sebagai berikut :</p>
-                        <ul className="list-none">
+                        <ul>
                             <li>Sebelah Utara : Desa Mengening</li>
                             <li>Sebelah Timur : Desa Selulung</li>
                             <li>Sebelah Barat : Desa Catur</li>
